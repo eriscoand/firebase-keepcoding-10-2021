@@ -21,11 +21,11 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
                 
                 let message = Message.init(sender: user.sender, kind: kind, type: MessageTypeEnum.text.rawValue, value: text)
                 
-                let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
+                let manager = MessageInteractor.init(manager: MessageFirebase.init(discussion: self.actualDiscussion)).manager
                 
                 manager.add(message: message, onSuccess: {
-                    self.messages.append(message)
-                    self.messagesCollectionView.insertSections([self.messages.count - 1])
+                    //self.messages.append(message)
+                    //self.messagesCollectionView.insertSections([self.messages.count - 1])
                 }, onError: { (error) in
                     print(error)
                 })

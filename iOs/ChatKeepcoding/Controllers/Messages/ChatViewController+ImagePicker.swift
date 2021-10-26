@@ -16,7 +16,6 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         dismiss(animated: true, completion: {
             if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
                 
-                
                 let name = "\(UUID().uuidString).jpg"
                 let mediaItem = ImageMediaItem.init(image: pickedImage)
                 let kind = MessageKind.photo(mediaItem)
@@ -30,7 +29,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
                     
                     message.value = url
                     
-                    let manager = MessageInteractor.init(manager: MessageDummy.init(discussion: self.actualDiscussion)).manager
+                    let manager = MessageInteractor.init(manager: MessageFirebase.init(discussion: self.actualDiscussion)).manager
                     manager.add(message: message, onSuccess: {
                         self.messages.append(message)
                         self.messagesCollectionView.insertSections([self.messages.count - 1])
