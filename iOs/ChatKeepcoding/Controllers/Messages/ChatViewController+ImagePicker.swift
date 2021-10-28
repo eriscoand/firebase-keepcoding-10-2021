@@ -29,7 +29,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
                     
                     message.value = url
                     
-                    let manager = MessageInteractor.init(manager: MessageFirestore.init(discussion: self.actualDiscussion)).manager
+                    let manager = MessageInteractor.init(manager: MessageFirebase.init(discussion: self.actualDiscussion)).manager
                     manager.add(message: message, onSuccess: {
                         //self.messages.append(message)
                         //self.messagesCollectionView.insertSections([self.messages.count - 1])

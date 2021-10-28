@@ -23,7 +23,7 @@ extension ChatViewController: MessagesDataSource {
     
     func fetchMessages() {
         
-        let manager = MessageInteractor.init(manager: MessageFirestore.init(discussion: self.actualDiscussion)).manager
+        let manager = MessageInteractor.init(manager: MessageFirebase.init(discussion: self.actualDiscussion)).manager
         
         manager.list(onSuccess: { (messages) in
             self.messages = messages

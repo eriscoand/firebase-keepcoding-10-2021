@@ -43,6 +43,8 @@
 		338BCB4620725E34004303F7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BCB4520725E34004303F7 /* Event.swift */; };
 		338BCB482072621A004303F7 /* LogDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BCB472072621A004303F7 /* LogDummy.swift */; };
 		62EFAA8011D03A9C98EB2238 /* Pods_ChatKeepcoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3F0903F59B6684F9E86648 /* Pods_ChatKeepcoding.framework */; };
+		85147088272B3F77001CC2CC /* AppDelegate+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85147087272B3F77001CC2CC /* AppDelegate+Notification.swift */; };
+		8514708A272B5014001CC2CC /* LogFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85147089272B5014001CC2CC /* LogFirebase.swift */; };
 		854AC0EF27274D100065B618 /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AC0EE27274D100065B618 /* UserFirebase.swift */; };
 		854AC0F127275C4C0065B618 /* DiscussionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AC0F027275C4C0065B618 /* DiscussionFirebase.swift */; };
 		854AC0F427275F630065B618 /* Discussion+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AC0F327275F630065B618 /* Discussion+Firebase.swift */; };
@@ -95,6 +97,8 @@
 		338BCB4520725E34004303F7 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		338BCB472072621A004303F7 /* LogDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDummy.swift; sourceTree = "<group>"; };
 		7A3F0903F59B6684F9E86648 /* Pods_ChatKeepcoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatKeepcoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85147087272B3F77001CC2CC /* AppDelegate+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notification.swift"; sourceTree = "<group>"; };
+		85147089272B5014001CC2CC /* LogFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFirebase.swift; sourceTree = "<group>"; };
 		854AC0EE27274D100065B618 /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
 		854AC0F027275C4C0065B618 /* DiscussionFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionFirebase.swift; sourceTree = "<group>"; };
 		854AC0F327275F630065B618 /* Discussion+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Discussion+Firebase.swift"; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				33845AA6206304B400800A99 /* AppDelegate.swift */,
+				85147087272B3F77001CC2CC /* AppDelegate+Notification.swift */,
 			);
 			path = ApplicationDelegate;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				854AC0F027275C4C0065B618 /* DiscussionFirebase.swift */,
 				854AC0F8272764200065B618 /* MessageFirebase.swift */,
 				854AC1022728A13C0065B618 /* UploadFirebase.swift */,
+				85147089272B5014001CC2CC /* LogFirebase.swift */,
 			);
 			path = FirebaseImplementation;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/abseil/absl.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -470,6 +477,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/absl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -525,6 +533,7 @@
 				33845B68206DA84D00800A99 /* DiscussionsViewController+Table.swift in Sources */,
 				854AC10127288E0F0065B618 /* Message+Firestore.swift in Sources */,
 				338BCB4220725D66004303F7 /* LogInteractor.swift in Sources */,
+				8514708A272B5014001CC2CC /* LogFirebase.swift in Sources */,
 				338BCB4420725D81004303F7 /* LogManager.swift in Sources */,
 				854AC0F127275C4C0065B618 /* DiscussionFirebase.swift in Sources */,
 				854F4072249FE3930060E1E8 /* ImageMediaItem.swift in Sources */,
@@ -543,6 +552,7 @@
 				33845B05206B114300800A99 /* ChatViewController+DataSource.swift in Sources */,
 				33845B12206B142A00800A99 /* MessageDummy.swift in Sources */,
 				33845B0B206B126A00800A99 /* Message.swift in Sources */,
+				85147088272B3F77001CC2CC /* AppDelegate+Notification.swift in Sources */,
 				33845B0F206B13E500800A99 /* MessageManager.swift in Sources */,
 				33845ADD2063150B00800A99 /* DiscussionCell.swift in Sources */,
 				854AC1032728A13C0065B618 /* UploadFirebase.swift in Sources */,

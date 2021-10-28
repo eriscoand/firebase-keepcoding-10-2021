@@ -13,5 +13,6 @@ target 'ChatKeepcoding' do
   pod 'Firebase/Firestore'
   pod 'FirebaseStorage'
   pod 'Kingfisher'
+  pod 'Firebase/Messaging'
 
 end
